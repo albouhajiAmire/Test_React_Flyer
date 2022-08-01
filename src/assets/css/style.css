@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,400&display=swap");
+:root {
+  --main-color: #dddd;
+  --background-color: #f1f2f6;
+  --background: #ffffff;
+  --background1: #5b6ad0;
+  --color-hover: #ffffff;
+  --border-color1: #cccccc;
+  --border-color2: #0064ff;
+  --outlin-color: #757d8a;
+  --border-input: #5b6ad0;
+  --color-btn: #ffffff;
+  --border-btn: #7b61ff;
+  --small-color: #ccc;
+  --color-black: #000000;
+  --input-color: #b1b1b1;
+  --color-h: #404d61;
+  --roboto-family: "Roboto", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  margin-top: 5px;
+  padding: 2rem 1.5rem;
+  background: var(--background);
+  min-height: calc(100vh - 90vh);
+  margin-left: 250px;
+}
+@media only screen and (max-width: 768px) {
+  main {
+    margin-top: 8px;
+    padding: 1rem 1rem;
+    margin-left: 6px;
+  }
+}

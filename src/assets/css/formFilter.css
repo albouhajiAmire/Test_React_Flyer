@@ -1,0 +1,89 @@
+@import url(../css/style.css);
+.formFilter {
+  border: 1px solid var(--border-color2);
+  padding: 22px;
+  width: 346px;
+  height: 314px;
+  left: 71%;
+  top: 34%;
+  position: absolute;
+  display: none;
+  border-radius: 8px;
+  background: var(--background);
+}
+.formFilter.active {
+  display: block;
+}
+.chek {
+  display: flex;
+  justify-content: start;
+  margin-top: 14px;
+  margin-bottom: 16px;
+}
+.check {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0px;
+  margin-right: 7px;
+  margin-right: 10px;
+  align-items: center;
+}
+.check span {
+  font-size: 12px;
+  white-space: nowrap;
+}
+.inputName {
+  margin-bottom: 12px;
+}
+.inputName,
+.inputEmail,
+.inputRole {
+  width: 311px;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color1);
+  color: var(--input-color);
+  padding: 15px 13px;
+  font-size: 16px;
+}
+input:focus {
+  outline: var(--outlin-color);
+  color: var(--outlin-color);
+}
+.formFilter strong {
+  color: var(--color-black);
+  width: 46px;
+  height: 19px;
+  font-size: 16px;
+}
+.chek .check .checkbox {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border-color1);
+  color: var(--input-color);
+  margin-right: 10px;
+}
+.btFilter {
+  height: 41px;
+  width: 106px;
+  margin-top: 13px;
+  position: absolute;
+  right: 12px;
+  border: none;
+  background: var(--background1);
+  border-radius: 6px;
+  color: var(--color-btn);
+  cursor: pointer; 
+}
+
+@media only screen and (max-width: 768px) {
+  .formFilter {
+    display: block;
+    position: absolute;
+    left: 34px;
+    width: 90%;
+    top: 338px;
+    padding: 14px 14px;
+    margin: 0px -15px;
+  }
+}

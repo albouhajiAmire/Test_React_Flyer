@@ -1,0 +1,93 @@
+@import url(../../assets/css/style.css);
+.sidebar {
+  width: 250px;
+  height: 941px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: var(--background-color);
+  z-index: 3;
+}
+.nameUser{
+  margin-top: 13px;
+}
+.sidebar .nameUser h4{
+  font-size: 18px;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.sidebar-brand {
+  height: 100px;
+  padding: 1rem 0rem 1rem 2rem;
+}
+.sidebar-brand span {
+  display: inline-block;
+  padding-right: 1rem;
+}
+.sidebar-menu li {
+  width: 212px;
+  margin-bottom: 14px;
+  padding: 0 10px;
+  height: 44px;
+}
+.sidebar-menu a {
+  display: block;
+  color: var(--outlin-color);
+  font-size: 1.1rem;
+  display: flex;
+  padding: 8px;
+  justify-content: space-between;
+  padding: 10px 16px;
+}
+.sidebar-menu a:hover {
+  background: var(--color-hover);
+  color: var(--outlin-color);
+  border-radius: 5px;
+}
+.sidebar-menu a.active {
+  background: var(--color-hover);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: var(--outlin-color);
+  border-radius: 5px;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 16px;
+}
+.sidebar-menu a span:first-child {
+  font-size: 14px;
+}
+.sidebar-menu a span:nth-child(3) {
+  font-size: 1.2rem;
+  /* padding-left: 4rem; */
+}
+.user-wrapper {
+  display: flex;
+  align-items: 50%;
+}
+.user-wrapper img {
+  border-radius: 50%;
+  margin-right: 1rem;
+  width: 40px;
+  height: 40px;
+  margin-top:15px
+}
+.user-wrapper small {
+  display: inline-block;
+  color: var(--small-color);
+}
+@media screen and (max-width: 768px) {
+.sidebar-menu{
+  display: none;
+}
+.sidebar{
+  height: auto;
+  width: 100%;
+}
+}
