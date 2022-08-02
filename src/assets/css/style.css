@@ -4,6 +4,7 @@
   --background-color: #f1f2f6;
   --background: #ffffff;
   --background1: #5b6ad0;
+  --backgroundTd: #F8F8F8;
   --color-hover: #ffffff;
   --border-color1: #cccccc;
   --border-color2: #0064ff;
@@ -15,6 +16,10 @@
   --color-black: #000000;
   --input-color: #b1b1b1;
   --color-h: #404d61;
+  --color-status-busy:#f63f3f;
+  --color-status-onvacation:#f9a348;
+  --color-status-working:#404d61;
+  --color-status-free:#0064ff;
   --roboto-family: "Roboto", sans-serif;
 }
 
@@ -29,10 +34,11 @@
 
 main {
   margin-top: 5px;
-  padding: 2rem 1.5rem;
+  padding: 0rem 1.5rem;
   background: var(--background);
   min-height: calc(100vh - 90vh);
   margin-left: 250px;
+  position: relative;
 }
 @media only screen and (max-width: 768px) {
   main {

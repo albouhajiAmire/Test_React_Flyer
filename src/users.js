@@ -38,7 +38,7 @@ export const User = [
     id: "6",
     name: { firstname: "Eleanor", lastname: "Pena" },
     email: "vuhaithuongnute@gmail.com",
-    status: "OnVacation",
+    status: "On Vacation",
     role: "Analytics Admin",
   },
   {

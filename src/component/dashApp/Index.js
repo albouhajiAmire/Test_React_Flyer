@@ -11,23 +11,18 @@ function Index() {
   };
   //---------------------------------------------------------------------------------
   const [dt, setData] = useState(User);
-
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     role: "",
-    //State with list of all checked item :
     status: {
       checkList: [
         { value: "Free", label: "Free" },
         { value: "Working", label: "Working" },
-        { value: "OnVacation", label: "OnVacation" },
+        { value: "OnVacation", label: "On Vacation" },
         { value: "Busy", label: "Busy" },
       ],
     },
-  //   status: {
-  //  checkList : ["Free", "Working", "On vacation", "Busy"]
-  //   }
   });
   const { name, email, status, role } = formData;
 
@@ -36,7 +31,6 @@ function Index() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
   //---------------------------------{END handleForm}--------------------------------
-
   //---------------------------------{START HandleCheck}-----------------------------
   // Add/Remove checked item from listHandleSubmit
   const handleCheck = (e) => {
@@ -52,51 +46,69 @@ function Index() {
   };
   //---------------------------------{END HandleSubmit}------------------------------
   //-----------------------------------{START SEARCH :}------------------------------
-    const searchName = () => {
-        if (formData.name !== "" || formData.status !== "" || formData.role !== ""|| formData.email !== "" ) {
-          let filtered =
-          User.filter((usr) => {
-              return (
-                usr.name.firstname.toLowerCase() === formData.name.toLowerCase() ||
-                usr.name.lastname.toLowerCase() === formData.name.toLowerCase() || 
-                usr.email.toLowerCase() === formData.email.toLowerCase() ||
-                usr.status === formData.Free ||
-                usr.status === formData.Working||
-                usr.status === formData.OnVacation||
-                usr.status === formData.Busy ||
-                usr.role.toLowerCase() === formData.role.toLowerCase()
-              );
-            });
-          setData(filtered);
-        }else{
-          setData(User);
-        }
-      };
-  console.log(formData);
-
-    //---------------------------------{START ResetData}-------------------------------
-    const resetData = () => {
-      setFormData({ name: "", email: "", role: "" ,status:""});
+  const searchName = () => {
+    if (
+      formData.name !== "" ||
+      formData.status !== "" ||
+      formData.role !== "" ||
+      formData.email !== ""
+    ) {
+      let filtered = User.filter((usr) => {
+        console.log({ usr });
+        console.log("formdata:", formData);
+        usr.status = usr.status.replace(" ", "");
+        return (
+          usr.name.firstname.toLowerCase() === formData.name.toLowerCase() ||
+          usr.name.lastname.toLowerCase() === formData.name.toLowerCase() ||
+          usr.email.toLowerCase() === formData.email.toLowerCase() ||
+          usr.status === formData.Free ||
+          usr.status === formData.Working ||
+          usr.status === formData["On Vacation"] ||
+          usr.status === formData.Busy ||
+          usr.role.toLowerCase() === formData.role.toLowerCase()
+        );
+      });
+      setData(filtered);
+    } else {
       setData(User);
-    };
-    // useEffect(() => {
-    //   resetData()
-    // }, []);
-    useEffect(() => {
-      if (
-        formData.name === "" &&
-        formData.email === "" &&
-        formData.status === "" &&
-        formData.role === ""
-      ) {
-        setData(User);
-      }
-    }, [formData]);
-    //-----------------------------------{End ResetData}-------------------------------
+    }
+  };
+  console.log(formData);
   //---------------------------------{END SHEARCH}-----------------------------------
+
+  //---------------------------------{START ResetData}-------------------------------
+  const resetData = () => {
+    setFormData({
+      ...formData,
+      name: "",
+      email: "",
+      role: "",
+      status: {
+        checkList: [
+          { value: "Free", label: "Free" },
+          { value: "Working", label: "Working" },
+          { value: "OnVacation", label: "On Vacation" },
+          { value: "Busy", label: "Busy" },
+        ],
+      },
+    });
+    setData(User);
+  };
+
+  useEffect(() => {
+    if (
+      formData.name === "" &&
+      formData.email === "" &&
+      formData.status === "" &&
+      formData.role === ""
+    ) {
+      setData(User);
+    }
+  }, [formData]);
+  //-----------------------------------{End ResetData}-------------------------------
   return (
     <>
-      <div className="head">
+         <div className="head">
         <div className="titleDash">
           <h2>Employee</h2>
           <span>18 results found</span>
@@ -134,7 +146,6 @@ function Index() {
               name="name"
               value={name}
               onChange={(e) => handleForm(e)}
-              // onKeyDown={searchName}
             />
             <input
               className="inputEmail"
@@ -142,7 +153,6 @@ function Index() {
               type="email"
               name="email"
               value={email}
-              // onKeyDown={searchEmail}
               onChange={(e) => handleForm(e)}
             />
           </div>
@@ -164,7 +174,6 @@ function Index() {
                   <span>{item.label}</span>
                 </div>
               ))}
-            {/* <div>{`Items checked are: ${checkedItems}`}</div> */}
           </div>
           <div className="inputfilter">
             <input
@@ -173,7 +182,6 @@ function Index() {
               type="text"
               name="role"
               value={role}
-              // onKeyDown={searchRole}
               onChange={(e) => handleForm(e)}
             />
           </div>
@@ -187,7 +195,7 @@ function Index() {
         </form>
       </div>
       <Cards />
-      <Users data={dt} />
+   <Users data={dt} />
     </>
   );
 }

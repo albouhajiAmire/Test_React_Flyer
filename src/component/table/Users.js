@@ -1,9 +1,7 @@
 import React from "react";
 import "./table.css";
 
-
-function Users({data}) {
-
+function Users({ data }) {
   return (
     <>
       <div className="table-data table-striped">
@@ -12,7 +10,7 @@ function Users({data}) {
             <thead>
               <tr>
                 <th>
-                  User <i className="fa-solid fa-caret-down"></i>
+                  Name <i className="fa-solid fa-caret-down"></i>
                 </th>
                 <th>
                   Email <i className="fa-solid fa-caret-down"></i>
@@ -31,11 +29,14 @@ function Users({data}) {
                 data.map((user) => (
                   <tr key={user.id}>
                     <td>
-                      <img src="https://mdbootstrap.com/img/new/avatars/8.jpg"  alt="user"/>
-                      <p> {user.name.lastname && user.name.firstname } </p>
+                      <img
+                        src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                        alt="user"
+                      />
+                      <p> {`${user.name.lastname} ${user.name.firstname}`} </p>
                     </td>
                     <td>{user.email}</td>
-                    <td> 
+                    <td>
                       <span
                         className="status"
                         style={{

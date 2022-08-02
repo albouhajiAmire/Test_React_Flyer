@@ -5,21 +5,21 @@
 header {
   display: flex;
   justify-content: space-between;
-  padding: 25px;
+  padding: 30px 20px;
 }
 h1 {
   color: var(--color-h);
   font-size: 28px;
   font-weight: bold;
+  padding: 10px 15px;
 }
 .search-wrapper {
-  /* border: 1px solid var(--small-color); */
   height: 44px;
   display: flex;
   align-items: center;
   width: 470px;
   border: 1px solid var(--border-input);
-  border-radius: 5px;
+  border-radius: 14px;
 }
 
 .search-wrapper span {
@@ -44,28 +44,7 @@ hr {
   border: 1px solid var(  --background-color);
   height: 0px;
 }
-/* 
-@media screen and (max-width: 800px) {
-  header {
-    position: absolute;
-    margin-top: 36%;
-    left: 0%;
-  }
-} */
-/* @media only screen and (max-width : 960px){
-  header{
-    grid-template-columns: repeat(3, 1fr);
-    position: absolute;
-    margin-top: 36%;
-    left: 0%;
-  }
-  hr{
-    display: none;
-  }
-  .recent-grid {
-    grid-template-columns: 60% 40%;
-  }
-} */
+
 .btnFilterCls {
   display: flex;
   float: right;
@@ -87,7 +66,7 @@ hr {
     margin-top: 12px;
   }
   .search-wrapper {
-    width: 340px;
+    width: 350px;
   }
   hr {
     margin-left: -199%;

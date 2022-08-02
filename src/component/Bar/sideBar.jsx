@@ -30,7 +30,7 @@ function SideBar() {
               </a>
             </li>
             <li>
-              <a href="" className="">
+              <a href="">
                 <span className="las la-igloo">
                   <i className="fa-solid fa-table"></i>&ensp; Data table
                 </span>
@@ -40,7 +40,7 @@ function SideBar() {
               </a>
             </li>
             <li>
-              <a href="" className="">
+              <a href="">
                 <span className="las la-igloo">
                   <i className="fa-solid fa-table-cells"></i>&ensp; Product
                 </span>
@@ -50,7 +50,7 @@ function SideBar() {
               </a>
             </li>
             <li>
-              <a href="" className="">
+              <a href="">
                 <span className="las la-igloo">
                   <i className="fa-solid fa-clipboard"></i>&ensp; Analytics
                 </span>
@@ -60,7 +60,7 @@ function SideBar() {
               </a>
             </li>
             <li>
-              <a href="" className="">
+              <a href="">
                 <span className="las la-igloo">
                   <i className="fa-solid fa-calendar"></i>&ensp; Calender
                 </span>
@@ -70,7 +70,7 @@ function SideBar() {
               </a>
             </li>
             <li>
-              <a href="" className="">
+              <a href="">
                 <span className="las la-igloo">
                   <i className="fa-solid fa-comment"></i>&ensp; Messenger
                 </span>
@@ -80,7 +80,7 @@ function SideBar() {
               </a>
             </li>
             <li>
-              <a href="" className="">
+              <a href="">
                 <span className="las la-igloo">
                   <i className="fa-brands fa-creative-commons"></i>&ensp; Crypto
                 </span>
@@ -90,12 +90,9 @@ function SideBar() {
               </a>
             </li>
             <li>
-              <a href="" className="">
+              <a href="">
                 <span className="las la-igloo">
                   <i className="fa-solid fa-power-off"></i>&ensp; Sign Out
-                </span>
-                <span>
-                  <i className="fa-solid fa-bars"></i>
                 </span>
               </a>
             </li>

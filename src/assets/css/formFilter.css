@@ -4,8 +4,8 @@
   padding: 22px;
   width: 346px;
   height: 314px;
-  left: 71%;
-  top: 34%;
+  left: 66%;
+  top: 31%;
   position: absolute;
   display: none;
   border-radius: 8px;
@@ -80,9 +80,9 @@ input:focus {
   .formFilter {
     display: block;
     position: absolute;
-    left: 34px;
+    left: 32px;
     width: 90%;
-    top: 338px;
+    top: 10%;
     padding: 14px 14px;
     margin: 0px -15px;
   }
