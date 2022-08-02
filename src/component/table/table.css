@@ -101,7 +101,9 @@ td {
     display: block;
   }
   .table-data .order table tr td .status {
-    padding: 6px 6px;
+    padding: 0;
+    font-size: 15px;
+    white-space: pre-line;
   }
   tbody tr {
     background: var(--backgroundTd);

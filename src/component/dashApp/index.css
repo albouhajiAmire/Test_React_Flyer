@@ -61,10 +61,10 @@
     top: 0;
     align-content: space-around;
     justify-content: space-between;
-    grid-gap: 14px;
+    grid-gap: 146px;
     position: absolute;
   }
   .btnFilterClose {
-    display: block;
+    display: none;
   }
 }
