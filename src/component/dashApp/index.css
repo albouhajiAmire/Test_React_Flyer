@@ -62,7 +62,7 @@
     align-content: space-around;
     justify-content: space-between;
     grid-gap: 146px;
-    position: absolute;
+  
   }
   .btnFilterClose {
     display: none;
