@@ -75,14 +75,23 @@ input:focus {
   color: var(--color-btn);
   cursor: pointer; 
 }
+@media only screen and (min-width: 768px) {
+  .formFilter{
+    left: 52%;
+    }
+}
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width : 960px){
+  .formFilter{
+  left: 27%;
+  }
+}
+@media  screen and (max-width: 600px) {
   .formFilter {
     display: block;
     position: absolute;
-    left: 23px;
-    width: 95%;
-    padding: 14px 14px;
-    margin: 0px -15px;
+    left: 11px;
+    margin: 0px;
+    padding: 14px 18px;
   }
 }

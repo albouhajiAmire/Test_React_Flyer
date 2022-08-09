@@ -19,7 +19,7 @@ function Index() {
       checkList: [
         { value: "Free", label: "Free" },
         { value: "Working", label: "Working" },
-        { value: "OnVacation", label: "On Vacation" },
+        { value: "On Vacation", label: "On Vacation" },
         { value: "Busy", label: "Busy" },
       ],
     },
@@ -54,16 +54,16 @@ function Index() {
       formData.email !== ""
     ) {
       let filtered = User.filter((usr) => {
-        console.log({ usr });
-        console.log("formdata:", formData);
-        usr.status = usr.status.replace(" ", "");
+        // console.log({ usr });
+        // console.log("formdata:", formData);
+        // usr.status = usr.status.replace("", "");
         return (
           usr.name.firstname.toLowerCase() === formData.name.toLowerCase() ||
           usr.name.lastname.toLowerCase() === formData.name.toLowerCase() ||
           usr.email.toLowerCase() === formData.email.toLowerCase() ||
           usr.status === formData.Free ||
           usr.status === formData.Working ||
-          usr.status === formData["On Vacation"] ||
+          usr.status === formData["On Vacation"]||
           usr.status === formData.Busy ||
           usr.role.toLowerCase() === formData.role.toLowerCase()
         );
@@ -73,11 +73,11 @@ function Index() {
       setData(User);
     }
   };
-  console.log(formData);
+  // console.log(formData);
   //---------------------------------{END SHEARCH}-----------------------------------
 
   //---------------------------------{START ResetData}-------------------------------
-  const resetData = () => {
+  const resetData = (e) => {
     setFormData({
       ...formData,
       name: "",
@@ -90,6 +90,7 @@ function Index() {
           { value: "OnVacation", label: "On Vacation" },
           { value: "Busy", label: "Busy" },
         ],
+        
       },
     });
     setData(User);

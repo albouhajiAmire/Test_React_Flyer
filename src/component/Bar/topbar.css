@@ -54,7 +54,7 @@ hr {
   border-radius: 50%;
   cursor: pointer;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
   header {
     grid-template-columns: repeat(1, 1fr);
     display: grid;
@@ -67,7 +67,7 @@ hr {
     margin-top: 12px;
   }
   .search-wrapper {
-    width: 337px;
+    width: 336px;
   }
   hr {
     margin-left: -199%;
